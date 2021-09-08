@@ -11,6 +11,7 @@ Example has 5 animations for one model which can be changed using the UI buttons
 + Hop&Spin
 + Wave
 
+![Example](/docs/Example_screenshot.png)
 [TRY: Animated 3d Example](https://flexyourbrain.github.io/Defold-Animated-3D-Example/)
 
 
