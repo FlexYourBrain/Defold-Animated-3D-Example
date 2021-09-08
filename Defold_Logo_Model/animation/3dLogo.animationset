@@ -1,0 +1,15 @@
+animations {
+  animation: "/Defold_Logo_Model/animation/Defold_Logo_Spin.dae"
+}
+animations {
+  animation: "/Defold_Logo_Model/animation/Defold_Logo_Hop.dae"
+}
+animations {
+  animation: "/Defold_Logo_Model/animation/Defold_Logo_Hop_Spin.dae"
+}
+animations {
+  animation: "/Defold_Logo_Model/animation/Defold_Logo_Wave.dae"
+}
+animations {
+  animation: "/Defold_Logo_Model/animation/Defold_Logo_Idle.dae"
+}

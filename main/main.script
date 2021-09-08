@@ -1,0 +1,17 @@
+local anim = "Defold_Logo_" ; 	local model_url = "/main#3D_Logo"
+
+function init(self)
+	
+	msg.post(".", "acquire_input_focus")
+	msg.post("@render:", "use_camera_projection")
+	msg.post("camera", "acquire_camera_focus")
+	
+end
+
+function on_message(self, message_id, message)
+	
+	if message_id == hash("animate") then
+		model.play_anim(model_url, anim..message.anim_id, go.PLAYBACK_LOOP_FORWARD, { playback_rate = 0.9 , blend_duration = 0.2 } )
+	end
+	
+end

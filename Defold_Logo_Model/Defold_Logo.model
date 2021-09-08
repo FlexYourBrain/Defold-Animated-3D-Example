@@ -1,0 +1,7 @@
+mesh: "/Defold_Logo_Model/animation/Defold_Logo_Spin.dae"
+material: "/Defold_Logo_Model/material/Logo.material"
+textures: "/Defold_Logo_Model/material/Defold_3dLogo_Albedo.png"
+skeleton: "/Defold_Logo_Model/animation/Defold_Logo_Spin.dae"
+animations: "/Defold_Logo_Model/animation/3dLogo.animationset"
+default_animation: "Defold_Logo_Idle"
+name: "unnamed"

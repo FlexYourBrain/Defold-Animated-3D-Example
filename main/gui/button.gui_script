@@ -1,0 +1,58 @@
+local spin = "Spin"; local hop = "Hop"; local hopspin = "Hop_Spin"; local wave = "Wave";local idle = "Idle"; local down = "_down"; local up = "_up"
+local bop = vmath.vector3(1.13,1.13,1.13); local one = 1
+
+function init(self)
+	
+	msg.post(".", "acquire_input_focus")
+	self.idle = gui.get_node("b_Idle")
+	self.spin = gui.get_node("b_Spin")
+	self.hop = gui.get_node("b_Hop")
+	self.hopspin = gui.get_node("b_Hop_Spin")
+	self.wave = gui.get_node("b_Wave")
+	self.last_pressed = self.idle
+	self.last_ani = idle
+	gui.animate(self.idle, "scale", bop, gui.EASING_OUTELASTIC, one)
+	
+end
+
+local function button_press(last_press, last_ani, current_press, current_ani)
+
+	gui.play_flipbook(last_press, last_ani..down)
+	gui.animate(last_press, "scale", one, gui.EASING_OUTELASTIC, one)
+	gui.play_flipbook(current_press, current_ani..up)
+	gui.animate(current_press, "scale", bop, gui.EASING_OUTELASTIC, one)
+	
+
+end
+
+function on_input(self, action_id, action)
+	
+	if action_id == hash("touch") and action.pressed then
+		if gui.pick_node(self.idle, action.x, action.y) and self.last_ani ~= idle then
+			button_press( self.last_pressed, self.last_ani, self.idle, idle )
+			self.last_pressed = self.idle ; self.last_ani = idle
+			msg.post("main:/main", "animate", { anim_id = idle})
+		end
+		if gui.pick_node(self.spin, action.x, action.y) and self.last_ani ~= spin then
+			button_press( self.last_pressed, self.last_ani, self.spin, spin )
+			self.last_pressed = self.spin ; self.last_ani = spin
+			msg.post("main:/main", "animate", { anim_id = spin})
+		end
+		if gui.pick_node(self.hop, action.x, action.y) and self.last_ani ~= hop then
+			button_press( self.last_pressed, self.last_ani, self.hop, hop )
+			self.last_pressed = self.hop ; self.last_ani = hop
+			msg.post("main:/main", "animate", { anim_id = hop})
+		end
+		if gui.pick_node(self.hopspin, action.x, action.y) and self.last_ani ~= hopspin then
+			button_press( self.last_pressed, self.last_ani, self.hopspin, hopspin )
+			self.last_pressed = self.hopspin ; self.last_ani = hopspin
+			msg.post("main:/main", "animate", { anim_id = hopspin})
+		end
+		if gui.pick_node(self.wave, action.x, action.y) and self.last_ani ~= wave then
+			button_press( self.last_pressed, self.last_ani, self.wave, wave )
+			self.last_pressed = self.wave ; self.last_ani = wave
+			msg.post("main:/main", "animate", { anim_id = wave})
+		end
+	end
+	
+end
