@@ -12,6 +12,7 @@ Example has 5 animations for one model which can be changed using the UI buttons
 + Wave
 
 ![Example](/docs/Example_screenshot.png)
+
 [TRY: Animated 3d Example](https://flexyourbrain.github.io/Defold-Animated-3D-Example/)
 
 
@@ -21,4 +22,4 @@ This example project goes along with a guide on how to export 3d animations from
 
 ## Credits
 
-* 3d version of Defold Logo , Model & Texture is community made.
+* 3d version of Defold Logo , model & texture is community made.
