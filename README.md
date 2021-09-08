@@ -20,4 +20,4 @@ This example project goes along with a guide on how to export 3d animations from
 
 ## Credits
 
-* Defold Logo 3d Model & Texture created by: ( Agustin R. ) Enjoy!
+* 3d version of Defold Logo , Model & Texture is community made.
