@@ -13,3 +13,4 @@ animations {
 animations {
   animation: "/Defold_Logo_Model/animation/Defold_Logo_Idle.dae"
 }
+skeleton: "/Defold_Logo_Model/animation/Defold_Logo_Idle.dae"
